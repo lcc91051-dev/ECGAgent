@@ -1,0 +1,87 @@
+# ECG (Electrocardiogram) Report Template
+# 心电图报告模板
+
+I_Patient_Information:
+  patient_id: ""
+  age: ""
+  gender: ""
+  date_of_examination: ""
+  referring_physician: ""
+
+II_Clinical_History:
+  reason_for_ecg: ""
+  # 常见原因: 胸痛、心悸、晕厥、常规体检、术前评估
+  relevant_medical_history: ""
+  # 高血压、糖尿病、冠心病、心肌病等
+  current_medications: ""
+
+III_Technical_Description:
+  lead_configuration: "Standard 12-lead / Single-lead (WESAD)"
+  recording_duration: ""
+  sampling_rate: ""
+  patient_state: "Resting / Stress test / Ambulatory"
+  signal_quality: "Good / Fair / Poor"
+
+IV_ECG_Analysis:
+  # 基本参数
+  heart_rate:
+    value: ""
+    unit: "bpm"
+    assessment: "Normal (60-100) / Bradycardia (<60) / Tachycardia (>100)"
+  
+  rhythm:
+    type: "Sinus rhythm / Atrial fibrillation / Other"
+    regularity: "Regular / Irregular"
+  
+  # HRV (心率变异性) 分析
+  hrv_analysis:
+    mean_rr: ""       # 平均 RR 间隔 (ms)
+    sdnn: ""          # RR 间隔标准差 (ms)
+    rmssd: ""         # 相邻 RR 差值的均方根 (ms)
+    pnn50: ""         # 相邻 RR 差值 >50ms 的比例 (%)
+    lf_power: ""      # 低频功率 0.04-0.15 Hz (ms²)
+    hf_power: ""      # 高频功率 0.15-0.40 Hz (ms²)
+    lf_hf_ratio: ""   # LF/HF 比值
+  
+  # 压力评估
+  stress_assessment:
+    level: "Low / Moderate / High"
+    confidence: ""
+    interpretation: ""
+    # 高压力指标: 低 RMSSD, 低 pNN50, 高 LF/HF 比值
+
+  # 心律失常检测 (如适用)
+  arrhythmia_detection:
+    findings: []
+    # 可能的发现: Normal, Myocardial Infarction, ST/T Change, 
+    #             Conduction Disturbance, Hypertrophy
+
+V_Interpretation:
+  primary_findings: ""
+  # 主要发现摘要
+  
+  abnormalities_detected: []
+  # 检测到的异常列表
+  
+  clinical_significance: ""
+  # 临床意义解读
+
+VI_Recommendations:
+  # 基于分析结果的建议
+  lifestyle_recommendations: []
+  # 如: 深呼吸练习、规律运动、减轻压力
+  
+  follow_up_actions: []
+  # 如: 建议复查、转诊心内科
+  
+  emergency_warnings: ""
+  # 如有紧急情况需要说明
+
+VII_Conclusion:
+  summary: ""
+  # 报告总结
+  
+  overall_assessment: "Normal / Borderline / Abnormal"
+  
+  signature: ""
+  date: ""
